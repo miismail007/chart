@@ -32,7 +32,7 @@ function BarChart(props, ref: Ref<RefType>) {
         setData(newData);
     }
 
-    useImperativeHandle(ref, () => ({
+    useImperativeHandle(ref, () => ({ // useImperativeHandle is used to attach any values or methods to the ref we got from parent
         onRegenerate
     }))
 
@@ -82,4 +82,4 @@ function BarChart(props, ref: Ref<RefType>) {
   )
 }
 
-export default forwardRef(BarChart)
+export default forwardRef(BarChart) // forwardRef is used to get ref from parent
